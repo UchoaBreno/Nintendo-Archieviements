@@ -1,14 +1,119 @@
-/* styles.css */
+/* Reset CSS básico */
 
-body {
+/* Definir a margem e o preenchimento de todos os elementos como zero */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que a largura e a altura incluam o preenchimento e a borda */
+  }
+  
+  /* Remover o sublinhado de todos os links */
+  a {
+    text-decoration: none;
+  }
+  
+  /* Remover a lista de estilos */
+  ul, ol {
+    list-style: none;
+  }
+  
+  /* Definir a cor do texto padrão */
+  body {
+    background-color: #66c0f4;
+    color: #000;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
+  }
+  
 
-h1 {
-    color: #333;
-}
+/* styles.css */
+.sidebar {
+    display: inline-block;
+    width: 100%;
+    height: 100px; 
+    background-color: #171a21;
+    top: 0;
+    left: 0;
+  }
+  
+  .sidebar ul {
+    display: flex;
+    margin: 0 85% 0 0;
+    list-style-type: none;
+    padding: 0px;
+    background-color: #1b2838;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    border-width: 50px;
+  }
+  
+  /* Estilização dos itens da lista */
+  .sidebar ul li {
+    display: flex;
+    padding: 14px;
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px; /* Adiciona o mesmo raio de borda */
+    border-width: 50px; /* Adiciona a mesma largura de borda */
+  }
+  
+  /* Efeito de hover no sidebar ul li */
+  .sidebar ul li:hover {
+    background-color: #c7d5e0;
+    border-radius: 50px;
+    border-width: 100px;
+    padding: 10px;
+  }
+  
+  /* Estilização dos spans */
+  .sidebar span {
+    display: inline-block;
+    font-size: 16px;
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px; /* Adiciona o mesmo raio de borda */
+    border-width: 50px; /* Adiciona a mesma largura de borda */
+  }
+  
+  /* Efeito de hover no span */
+  .sidebar span:hover {
+    background-color: #c7d5e0;
+    border-radius: 50px;
+    border-width: 100px;
+    padding: 10px;
+  }
+  
+  #search-form {
+    text-align: center; /* Alinha os elementos filho ao centro */
+    position: absolute;
+    top: 61px;
+    right: 5px;
+    z-index: 1;
+  }
+  
+  #search-input {
+    /* Estilos para a barra de pesquisa (opcional) */
+    width: 250px; /* Largura desejada */
+    padding: 10px; /* Espaçamento interno */
+    margin-right: 20px; /* Espaço à direita do campo de entrada */
+    border-radius: 8px;
+  }
+  
+  #search-form button {
+    /* Estilos para o botão de pesquisa */
+    padding: 8px 20px; /* Espaçamento interno */
+    background-color: #2a475e; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+    cursor: pointer; /* Altera o cursor ao passar o mouse */
+  }
 
-p {
-    color: #666;
-}
+  .content {
+    display: block;
+    margin-left: 10px;
+    padding: 10px;
+  }
+  

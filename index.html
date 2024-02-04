@@ -4,11 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Página</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Inclui o arquivo CSS -->
+    <link rel="stylesheet" href="style.css"> <!-- Inclui o arquivo CSS -->
 </head>
 <body>
-    <h1>Achievement tracker</h1>
-    <p>Este é o conteúdo da minha página.</p>
-    <script src="script.js"></script> <!-- Inclui o arquivo JavaScript -->
+    <div>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="#">Amigos</a>
+                </li>
+                <li>
+                    <a href="#">Jogos</a>
+                </li>
+                <li>
+                    <a href="#">Configurações</a>
+                </li>
+            </ul>
+            <span><a href="#">Speed Runs</a></span>
+            <span><a href="#">Recordes de Pontuação</a></span>
+            <span><a href="#">Conquistas Globais</a></span>
+            <span><a href="#">Conquistas por Jogo</a></span>
+        </div>
+        <div class="content">
+            <h2>Bem vindo ao rastreador de conquistas</h2>
+            <p>Veja as ultimas novidades</p>
+        </div>
+
+          <form id="search-form">
+            <input type="text" id="search-input" placeholder="Digite sua pesquisa...">
+            <button type="submit">Pesquisar</button>
+          </form>
+          
+    </div>
 </body>
 </html>
