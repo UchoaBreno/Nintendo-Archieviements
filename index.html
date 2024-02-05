@@ -5,36 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Página</title>
     <link rel="stylesheet" href="style.css"> <!-- Inclui o arquivo CSS -->
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <div>
-        <div class="sidebar">
+    <header>
+        <nav>
+            <a href="/"class="logo">🎮</a>
             <ul>
-                <li>
-                    <a href="#">Amigos</a>
-                </li>
-                <li>
-                    <a href="#">Jogos</a>
-                </li>
-                <li>
-                    <a href="#">Configurações</a>
-                </li>
+                <li><a href="#">Amigos</a></li>
+                <li><a href="#">Jogos</a></li>
+                <li><a href="#">Configurações</a></li>
+                <li><a href="#">Sobre nós</a></li>
             </ul>
-            <span><a href="#">Speed Runs</a></span>
-            <span><a href="#">Recordes de Pontuação</a></span>
-            <span><a href="#">Conquistas Globais</a></span>
-            <span><a href="#">Conquistas por Jogo</a></span>
-        </div>
-        <div class="content">
-            <h2>Bem vindo ao rastreador de conquistas</h2>
-            <p>Veja as ultimas novidades</p>
-        </div>
+        </nav>
+    </header>
+ 
+    <div class="sidebar">
+        <span id="speedRuns"><a href="#">Speed Runs</a></span>
+            <div class="floating-page" id="floatingPage">
+                <h3>Essas são suas opções disponiveis</h3>
+                <br>
+                <ul>
+                    <li><a href="#">Super Mario</a></li>
+                    <li><a href="#">The Legend of Zelda</a></li>
+                    <li><a href="#">Donkey Kong</a></li>
+                </ul>
+            </div>
 
-          <form id="search-form">
-            <input type="text" id="search-input" placeholder="Digite sua pesquisa...">
-            <button type="submit">Pesquisar</button>
-          </form>
-          
+        <span><a href="#">Recordes de Pontuação</a></span>
+
+        <span><a href="#">Conquistas Globais</a></span>
+
+        <span><a href="#">Conquistas por Jogo</a></span>
+
     </div>
+
+    </div>
+    <div class="content">
+        <h2>Bem vindo ao rastreador de conquistas</h2>
+        <p>Veja as últimas novidades</p>
+    </div>
+
+    <form id="search-form">
+        <input type="text" id="search-input" placeholder="Digite sua pesquisa...">
+        <button type="submit">Pesquisar</button>
+    </form>
+
+    <main class="hero"></main>
+ 
 </body>
 </html>

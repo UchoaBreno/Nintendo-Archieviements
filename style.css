@@ -2,118 +2,153 @@
 
 /* Definir a margem e o preenchimento de todos os elementos como zero */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Garante que a largura e a altura incluam o preenchimento e a borda */
-  }
-  
-  /* Remover o sublinhado de todos os links */
-  a {
-    text-decoration: none;
-  }
-  
-  /* Remover a lista de estilos */
-  ul, ol {
-    list-style: none;
-  }
-  
-  /* Definir a cor do texto padrão */
-  body {
-    background-color: #66c0f4;
-    color: #000;
-    font-family: Arial, sans-serif;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Garante que a largura e a altura incluam o preenchimento e a borda */
+}
 
-/* styles.css */
+/* Remover o sublinhado de todos os links */
+a {
+  text-decoration: none;
+}
+
+/* Remover a lista de estilos */
+ul, ol {
+  list-style: none;
+}
+
+/* Definir a cor do texto padrão */
+body {
+  background-color: #66c0f4; /* Cor de fundo da página */
+  color: #000; /* Cor do texto padrão (preto) */
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+}
+
+/* Estilos para o header */
+
 .sidebar {
-    display: inline-block;
-    width: 100%;
-    height: 100px; 
-    background-color: #171a21;
-    top: 0;
-    left: 0;
-  }
-  
-  .sidebar ul {
-    display: flex;
-    margin: 0 85% 0 0;
-    list-style-type: none;
-    padding: 0px;
-    background-color: #1b2838;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 20px;
-    border-width: 50px;
-  }
-  
-  /* Estilização dos itens da lista */
-  .sidebar ul li {
-    display: flex;
-    padding: 14px;
-    font-size: 12px;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 20px; /* Adiciona o mesmo raio de borda */
-    border-width: 50px; /* Adiciona a mesma largura de borda */
-  }
-  
-  /* Efeito de hover no sidebar ul li */
-  .sidebar ul li:hover {
-    background-color: #c7d5e0;
-    border-radius: 50px;
-    border-width: 100px;
-    padding: 10px;
-  }
-  
-  /* Estilização dos spans */
-  .sidebar span {
-    display: inline-block;
-    font-size: 16px;
-    padding: 20px;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 20px; /* Adiciona o mesmo raio de borda */
-    border-width: 50px; /* Adiciona a mesma largura de borda */
-  }
-  
-  /* Efeito de hover no span */
-  .sidebar span:hover {
-    background-color: #c7d5e0;
-    border-radius: 50px;
-    border-width: 100px;
-    padding: 10px;
-  }
-  
-  #search-form {
-    text-align: center; /* Alinha os elementos filho ao centro */
-    position: absolute;
-    top: 61px;
-    right: 5px;
-    z-index: 1;
-  }
-  
-  #search-input {
-    /* Estilos para a barra de pesquisa (opcional) */
-    width: 250px; /* Largura desejada */
-    padding: 10px; /* Espaçamento interno */
-    margin-right: 20px; /* Espaço à direita do campo de entrada */
-    border-radius: 8px;
-  }
-  
-  #search-form button {
-    /* Estilos para o botão de pesquisa */
-    padding: 8px 20px; /* Espaçamento interno */
-    background-color: #2a475e; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto do botão */
-    border: none; /* Remove a borda padrão */
-    border-radius: 8px; /* Adiciona bordas arredondadas */
-    cursor: pointer; /* Altera o cursor ao passar o mouse */
-  }
+  display: flex;
+  width: 100%;
+  height: 140px;
+  background-color: #171a21; /* Cor de fundo da barra lateral */
+  margin-top: -67px;
+  top: 0;
+  left: 0;
+  color: #fff; /* Cor do texto da barra lateral */;
+}
 
-  .content {
-    display: block;
-    margin-left: 10px;
-    padding: 10px;
-  }
+/* Estilização dos spans */
+.sidebar span {
+  margin-top: 100px;
+  display: flex;
+  font-size: 16px;
+  padding: 10px;
+  text-decoration: none; /* Remove o sublinhado */
+  border-radius: 20px; /* Adiciona o mesmo raio de borda */
+  border-width: 50px; /* Adiciona a mesma largura de borda */
   
+}
+
+/* Efeito de hover no span */
+.sidebar span:hover {
+  background-color: #c7d5e0; /* Cor de fundo ao passar o mouse */
+  border-radius: 50px; /* Borda arredondada ao passar o mouse */
+  border-width: 100px; /* Largura da borda ao passar o mouse */
+  padding: 10px; /* Espaçamento interno ao passar o mouse */
+}
+
+/* Estilos para o span quando o hover está ativo */
+.sidebar span.hovered {
+  background-color: #c7d5e0; /* Cor de fundo ao passar o mouse */
+  border-radius: 50px; /* Borda arredondada ao passar o mouse */
+  border-width: 100px; /* Largura da borda ao passar o mouse */
+  padding: 10px; /* Espaçamento interno ao passar o mouse */
+}
+
+.floating-page {
+  display: none; /* Começa oculto */
+  position: absolute; /* Posição absoluta em relação ao elemento pai */
+  top: 100px; /* Posiciona no final do elemento pai */
+  left: 0;
+  z-index: 1; /* Garante que esteja acima do conteúdo */
+  background-color:#c7d5e0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  color: #000;
+  font-size: 14px;
+}
+
+#speedRuns:hover + .floating-page {
+  display: block; /* Exibe quando o Speed Runs é hover */
+}
+
+
+
+.logo{
+  font-size: 20px;
+  position: absolute;
+}
+
+.header {
+  display: flex; /* Exibe os elementos do cabeçalho em linha */
+  top: 0;
+  padding-inline: 16px;
+  justify-content: space-around; /* Distribui os itens uniformemente ao longo do eixo principal (horizontal) */
+  align-items: center; /* Centraliza os itens verticalmente */
+  height: 60px; /* Define uma altura para o cabeçalho */
+  background-color: #333; /* Cor de fundo do cabeçalho */
+}
+
+header ul {
+  display: flex; /* Exibe os itens de navegação em linha */
+  list-style: none; /* Remove os marcadores de lista */
+}
+
+header ul li {
+  margin: 5px; /* Adiciona um espaço entre os itens de navegação */
+  margin-left: 30px;
+}
+
+header ul li a {
+  position: relative;
+  top: 0;
+  font-size: 10px;
+  color: #fff; /* Cor do texto dos itens de navegação */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  justify-content: space-around;
+}
+/* Estilos para a barra lateral */
+
+
+/* Estilos para o formulário de pesquisa */
+#search-form {
+  text-align: center; /* Alinha os elementos filho ao centro */
+  position: absolute;
+  top: 61px;
+  right: 5px;
+  z-index: 1;
+}
+
+#search-input {
+  width: 250px; /* Largura do campo de entrada de pesquisa */
+  padding: 10px; /* Espaçamento interno do campo de entrada */
+  margin-right: 20px; /* Espaço à direita do campo de entrada */
+  border-radius: 8px; /* Borda arredondada do campo de entrada */
+}
+
+#search-form button {
+  padding: 8px 20px; /* Espaçamento interno do botão de pesquisa */
+  background-color: #2a475e; /* Cor de fundo do botão de pesquisa */
+  color: #fff; /* Cor do texto do botão de pesquisa */
+  border: none; /* Remove a borda do botão de pesquisa */
+  border-radius: 8px; /* Borda arredondada do botão de pesquisa */
+  cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão de pesquisa */
+}
+
+.content {
+  display: block; /* Exibe o conteúdo como um bloco */
+  margin-left: 10px; /* Margem à esquerda do conteúdo */
+  padding: 10px; /* Espaçamento interno do conteúdo */
+}
