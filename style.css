@@ -20,9 +20,13 @@ ul, ol {
 /* Definir a cor do texto padrão */
 body {
   background-color: #66c0f4; /* Cor de fundo da página */
-  color: #000; /* Cor do texto padrão (preto) */
+  color: #fff; /* Cor do texto padrão (preto) */
   font-family: Arial, sans-serif;
   text-decoration: none;
+}
+
+a button span{ 
+  color: white;
 }
 
 #background{
@@ -30,6 +34,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
+  
 }
 
 .icon{
@@ -42,7 +47,7 @@ body {
   display: flex;
   width: 100%;
   height: 140px;
-  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo da barra lateral */
+  background-color: rgba(0, 0, 0, 0.5);
   margin-top: -75px;
   top: 0;
   left: 0;
@@ -52,30 +57,32 @@ body {
 
 /* Estilização dos spans */
 .sidebar span {
-  margin-top: 100px;
+  margin-top: 50px;
   display: relative;
   font-size: 16px;
-  padding: 10px;
+  padding: 30px;
   text-decoration: none; /* Remove o sublinhado */
   border-radius: 20px; /* Adiciona o mesmo raio de borda */
   border-width: 50px; /* Adiciona a mesma largura de borda */
-  
+}
+
+.sidebar span a{
+  color: #fff;
 }
 
 /* Efeito de hover no span */
 .sidebar span:hover {
-  background-color: #c7d5e0; /* Cor de fundo ao passar o mouse */
+  background-color: #2a475e; /* Cor de fundo ao passar o mouse */
   border-radius: 50px; /* Borda arredondada ao passar o mouse */
-  border-width: 100px; /* Largura da borda ao passar o mouse */
-  padding: 10px; /* Espaçamento interno ao passar o mouse */
+  border-width: 10px; /* Largura da borda ao passar o mouse */
 }
 
 /* Estilos para o span quando o hover está ativo */
 .sidebar span.hovered {
-  background-color: #c7d5e0; /* Cor de fundo ao passar o mouse */
+  background-color: #2a475e; /* Cor de fundo ao passar o mouse */
   border-radius: 50px; /* Borda arredondada ao passar o mouse */
-  border-width: 100px; /* Largura da borda ao passar o mouse */
-  padding: 10px; /* Espaçamento interno ao passar o mouse */
+  border-width: 10px; /* Largura da borda ao passar o mouse */
+  margin-top: 70px;
 }
 
 .floating-page {
@@ -116,7 +123,6 @@ header ul li {
   margin: 5px; /* Adiciona um espaço entre os itens de navegação */
   margin-left: 30px;
 }
-
 header ul li a {
   position: relative;
   top: -35px;
@@ -131,7 +137,7 @@ header ul li a {
 #search-form {
   text-align: center; /* Alinha os elementos filho ao centro */
   position: absolute;
-  top: 95px;
+  top: 10px;
   right: 20px;
   z-index: 1;
 }
@@ -145,15 +151,112 @@ header ul li a {
 
 #search-form button {
   padding: 8px 20px; /* Espaçamento interno do botão de pesquisa */
-  background-color: #2a475e; /* Cor de fundo do botão de pesquisa */
+  background-color: rgba(0, 0, 0, 0.25); /* Cor de fundo do botão de pesquisa */
   color: #fff; /* Cor do texto do botão de pesquisa */
   border: none; /* Remove a borda do botão de pesquisa */
   border-radius: 8px; /* Borda arredondada do botão de pesquisa */
   cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão de pesquisa */
 }
+.slider{
+  margin: 0 auto;
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+}
 
-.content {
-  display: block; /* Exibe o conteúdo como um bloco */
-  margin-left: 10px; /* Margem à esquerda do conteúdo */
-  padding: 10px; /* Espaçamento interno do conteúdo */
+.slides{
+  width: 400%;
+  height: 400px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+
+}
+
+.slide{
+  width: 25%;
+  position: relative;
+}
+
+.slide img{
+  width: 800px;
+}
+
+.manual-navigation{
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background-color: #fff;
+
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -75%;
+}
+
+.navigation-auto div{
+  border:2px solid #20a6ff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.navigation-auto{
+  position: absolute;
+  width: 800px;
+  margin-top: 360px;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .autobtn1{
+  background-color: #fff;
+}
+
+#radio1:checked ~ .navigation-auto .autobtn2{
+  background-color: #fff;
+}
+
+#radio1:checked ~ .navigation-auto .autobtn3{
+  background-color: #fff;
+}
+
+#radio1:checked ~ .navigation-auto .autobtn4{
+  background-color: #fff;
 }
