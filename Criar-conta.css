@@ -1,0 +1,91 @@
+/* Reset CSS básico */
+
+/* Definir a margem e o preenchimento de todos os elementos como zero */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que a largura e a altura incluam o preenchimento e a borda */
+  }
+  
+  /* Remover o sublinhado de todos os links */
+  a {
+    text-decoration: none;
+  }
+  
+  /* Remover a lista de estilos */
+  ul, ol {
+    list-style: none;
+  }
+.img1{
+    position: absolute;
+    left: 0;
+}
+.img2{
+    position: absolute;
+    left: 970px;
+    bottom: -400px;
+}
+  /* Definir a cor do texto padrão */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #66c0f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+}
+
+form {
+    width: 30%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    color: black;
+    margin-left: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+    width: 95%;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-left: 10px;
+}
+
+input[type="submit"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+    margin-left: 25%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,151 @@
+body {
+    background-color: #66c0f4; /* Cor de fundo da página */
+    color: #fff; /* Cor do texto padrão (preto) */
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+  }
+
+#vidInicial{
+    transform: translate(10%, -30%);
+}
+
+h1{
+   color: blue;
+   font-size: 24px;
+   text-align: left;
+   padding: 80px;
+   top: 40%;
+   left: 20%;
+}
+
+.box {
+    display: flex;
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    padding: 25px;
+    top: 50%;
+    left: 80%; /* Você pode ajustar a posição horizontal aqui */
+    transform: translate(-50%, -50%);
+    width: 25%;
+    height: 75vh;
+    border-radius: 10px;   
+}
+
+fieldset{
+    border: 5px solid rgb(0, 25, 255);
+    height: 70vh;
+}
+
+legend{
+    color: #fff;
+    font-size: 25px;
+    justify-content: center;
+    margin: 5px;
+    margin-left: 40px;
+    background-color: #3048b1;
+}
+/* Estilos para os campos de email e senha */
+.inputUser {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    margin: 5px;
+    color: #fff;
+    font-size: 18px;
+    width: 95%;
+    letter-spacing: 2px;
+    margin-top: 15px;
+
+  }
+  
+  .labelInput {
+    position: absolute;
+    top: 5px; /* Ajusta a posição vertical */
+    left: 0; /* Mantém a posição horizontal */
+    padding: 10px;
+    pointer-events: none;
+    transition: .3s;
+    color: rgba(255, 255, 255, 0.7); /* Muda a cor para ficar mais suave */
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .inputBox {
+    position: relative;
+    margin-bottom: 40px; /* Adiciona espaço entre os campos */
+  }
+  
+  /* Estilos para o campo de senha */
+  .inputPassword {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    margin: 5px;
+    color: #fff;
+    font-size: 18px;
+    width: 95%;
+    letter-spacing: 2px;
+    
+  }
+  
+  .labelPassword {
+    position: absolute;
+    top: -5px; /* Ajusta a posição vertical */
+    left: 0; /* Mantém a posição horizontal */
+    padding: 10px;
+    pointer-events: none;
+    transition: .3s;
+    color: rgba(255, 255, 255, 0.7); /* Muda a cor para ficar mais suave */
+
+  }
+
+    .inputUser:focus ~ .labelInput,
+    .inputUser:valid ~ .labelInput {
+    top: -15px;
+    font-size: 13px;
+    color: dodgerblue;
+    }
+
+    .inputPassword:focus ~ .labelPassword,
+    .inputPassword:valid ~ .labelPassword {
+    top: -25px;
+    font-size: 13px;
+    color: dodgerblue;
+    }
+
+    #submit{
+        background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
+        width: 100%;
+        border: none;
+        padding: 10px;
+        color: #fff;
+        font-size: 15px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    /* estilo para esqueceu a senha */
+    .box a {
+        margin-top: 50px; /* Adiciona espaço entre o link e o botão */
+        font-size: 14px;
+    }
+    
+ /* Estilização para o botão "Criar Conta" */
+ .criar-conta {
+    background-image: linear-gradient(to top, rgb(77, 207, 65), rgb(26, 136, 16));
+    width: 100%; /* Ajusta a largura conforme o conteúdo */
+    border: none;
+    padding: 20px 15px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 20px; /* Adiciona espaço entre o link e o botão */
+}
+p{
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
