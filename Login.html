@@ -4,58 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="Login.css">
     <link rel="icon" href="./Assets/favicon.ico">
-    <link rel="stylesheet" href="script.js">
+    <script defer src="script.js"></script>
 
     <title>Entrar</title>
 </head>
 <body>
-<h1>Bem vindo ao Nintendo Archievements</h1>
 
-    <div id="vidInicial">
+    <header>
+        <img class="logo" src="Assets/logo-cap.png" alt="logo">
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">Quem somos ?</a>
+            <a href="#">Serviços</a>
+            <a href="#">Contato</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
 
-        <video width="300" height="300" controls loop autoplay muted>
-            <source src="Assets/GIF - Super Mário (720p).mp4" type="video/mp4">
-          </video>
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+        <div class="form-box login">
+            
+            <h2>Login</h2>
 
-    </div>
+            <form action="#">
 
-
-    <div class="box">
-        <form>
-            <fieldset>
-                <legend><strong>Área do usuário</strong></legend>
-
-                <div class="inputBox">
-
-                    <div class="inputBox">
-                        <input type="text" class="inputUser" required>
-                        <label class="labelInput">Email</label>
-                      </div>
-                      
-                      <div class="inputBox">
-                        <input type="password" class="inputPassword" required>
-                        <label class="labelPassword">Senha</label>
-                      </div>                      
-
-                      <input type="submit" class="enviar" id="submit" onclick="Enviar();" value="Enviar">
-                      <br><br>
-                    <a href="#"><u>Esqueceu sua senha ?</u></a>
-                    <button type="button" class="criar-conta" onclick="criarConta()">Criar Conta</button>
-
-                    <p>Descubra as melhores estratégias, assista aos vídeos e acompanhe os líderes da comunidade de jogos em suas jornadas épicas em nossa plataforma dedicada. Junte-se a nós e eleve sua experiência de jogos para o próximo nível !</p>
-                    
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" required>
+                    <label for="Email">Email</label>
                 </div>
 
-            </fieldset>
-        </form>
-</div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" required>
+                    <label for="Password">Senha</label>
+                </div>
 
+                <div class="lembre-depois">
+                    <label> <input type="checkbox">Me lembre depois</label>
+                    <a href="#">Esqueceu sua senha ?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="registrar-login"></div>
 
-
+                <div class="registrar-login">
+                <p>Não tem uma conta?<a href="Criar-conta.html" class="registrar-link">Registre-se</a></p>
+            </div>
+            </form>
+        </div>
     </div>
 
-
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

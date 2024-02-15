@@ -1,151 +1,226 @@
-body {
-    background-color: #66c0f4; /* Cor de fundo da página */
-    color: #fff; /* Cor do texto padrão (preto) */
-    font-family: Arial, sans-serif;
-    text-decoration: none;
-  }
-
-#vidInicial{
-    transform: translate(10%, -30%);
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #fff;
 }
 
-h1{
-   color: blue;
-   font-size: 24px;
-   text-align: left;
-   padding: 80px;
-   top: 40%;
-   left: 20%;
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('wallpaperflare.com_wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-.box {
-    display: flex;
-    flex-direction: column; /* Empilha os elementos verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    padding: 25px;
-    top: 50%;
-    left: 80%; /* Você pode ajustar a posição horizontal aqui */
-    transform: translate(-50%, -50%);
-    width: 25%;
-    height: 75vh;
-    border-radius: 10px;   
+header{
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  padding: 20px 100px;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.logo{
+  position: flex;
+  width: 70px;
+  height: 40px;
+  margin-left: -40px;
+  margin-top: -10px;
 }
 
-fieldset{
-    border: 5px solid rgb(0, 25, 255);
-    height: 70vh;
+.navigation a{
+  position: relative;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-left: 50px;
+  text-decoration: none;
 }
 
-legend{
-    color: #fff;
-    font-size: 25px;
-    justify-content: center;
-    margin: 5px;
-    margin-left: 40px;
-    background-color: #3048b1;
+.navigation a::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  left: 0;
+  bottom: -10px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .5s;
 }
-/* Estilos para os campos de email e senha */
-.inputUser {
-    background: none;
-    border: none;
-    border-bottom: 1px solid white;
-    outline: none;
-    margin: 5px;
-    color: #fff;
-    font-size: 18px;
-    width: 95%;
-    letter-spacing: 2px;
-    margin-top: 15px;
 
-  }
-  
-  .labelInput {
-    position: absolute;
-    top: 5px; /* Ajusta a posição vertical */
-    left: 0; /* Mantém a posição horizontal */
-    padding: 10px;
-    pointer-events: none;
-    transition: .3s;
-    color: rgba(255, 255, 255, 0.7); /* Muda a cor para ficar mais suave */
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .inputBox {
-    position: relative;
-    margin-bottom: 40px; /* Adiciona espaço entre os campos */
-  }
-  
-  /* Estilos para o campo de senha */
-  .inputPassword {
-    background: none;
-    border: none;
-    border-bottom: 1px solid white;
-    outline: none;
-    margin: 5px;
-    color: #fff;
-    font-size: 18px;
-    width: 95%;
-    letter-spacing: 2px;
-    
-  }
-  
-  .labelPassword {
-    position: absolute;
-    top: -5px; /* Ajusta a posição vertical */
-    left: 0; /* Mantém a posição horizontal */
-    padding: 10px;
-    pointer-events: none;
-    transition: .3s;
-    color: rgba(255, 255, 255, 0.7); /* Muda a cor para ficar mais suave */
-
-  }
-
-    .inputUser:focus ~ .labelInput,
-    .inputUser:valid ~ .labelInput {
-    top: -15px;
-    font-size: 13px;
-    color: dodgerblue;
-    }
-
-    .inputPassword:focus ~ .labelPassword,
-    .inputPassword:valid ~ .labelPassword {
-    top: -25px;
-    font-size: 13px;
-    color: dodgerblue;
-    }
-
-    #submit{
-        background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
-        width: 100%;
-        border: none;
-        padding: 10px;
-        color: #fff;
-        font-size: 15px;
-        cursor: pointer;
-        border-radius: 10px;
-    }
-
-    /* estilo para esqueceu a senha */
-    .box a {
-        margin-top: 50px; /* Adiciona espaço entre o link e o botão */
-        font-size: 14px;
-    }
-    
- /* Estilização para o botão "Criar Conta" */
- .criar-conta {
-    background-image: linear-gradient(to top, rgb(77, 207, 65), rgb(26, 136, 16));
-    width: 100%; /* Ajusta a largura conforme o conteúdo */
-    border: none;
-    padding: 20px 15px;
-    color: #fff;
-    font-size: 15px;
-    cursor: pointer;
-    border-radius: 10px;
-    margin-top: 20px; /* Adiciona espaço entre o link e o botão */
+.navigation a:hover::after{
+  transform-origin: left;
+  transform: scaleX(1);
 }
-p{
-    font-size: 16px;
-    font-family: 'Times New Roman', Times, serif;
+
+.navigation .btnLogin-popup{
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 500;
+   margin-left: 40px;
+   transition: .5s;
+}
+
+.navigation .btnLogin-popup:hover{
+  background: #fff;
+  color: #162938;
+}
+
+.wrapper{
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.wrapper .form-box{
+  width: 100%;
+  padding: 40px;
+}
+
+.wrapper .icon-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background: #162938;
+  font-size: 2em;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-bottom-left-radius:20px;
+  z-index: 1;
+}
+
+.form-box h2{
+  font-size: 2em;
+  color: #162938;
+  text-align: center;
+}
+
+.input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #162938;
+  margin: 30px 0;
+}
+
+.input-box label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #162938;
+  font-weight: 500;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+
+  top: -5px;
+}
+
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #162938;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+  position: absolute;
+  right: 5px;
+  font-size: 1.2em;
+  color: #162938;
+  line-height: 60px;
+}
+
+.lembre-depois{
+  font-size: .9em;
+  color: #162938;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lembre-depois label input{
+  accent-color: #162938;
+  margin-right: 3px;
+}
+
+.lembre-depois a{
+  color: #162938;
+  text-decoration: none;
+}
+
+.lembre-depois a:hover{
+  text-decoration: underline;
+}
+
+.btn{
+  width: 100%;
+  height: 45px;
+  background: #162938;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+}
+
+.registrar-login{
+  font-size: .9em;
+  color: #162938;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+
+.registrar-login p a{
+  color: #162938;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.registrar-login p a:hover{
+  text-decoration: underline;
 }

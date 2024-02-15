@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nintendo Achievements</title>
-
     <link rel="stylesheet" href="style.css"> <!-- Inclui o arquivo CSS -->
     <link rel="icon" href="./Assets/favicon.ico">
-
     <script defer src="script.js"></script>
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -15,16 +13,15 @@
 <body>
 
     <div id="background">
-        <video loop autoplay muted width="100%" height="100%">
+        <video loop autoplay muted width="100%" height="300vh">
             <source src="./Assets/background-video.mp4" type="video/mp4">
         </video>
-
     </div>
     
     <header>
-        <nav>
+        <nav class="nav">
             <img src="./Assets/logo-cap.png" alt="Ícone" class="icon">
-            <ul>
+            <ul class="menu">
                 <li><a href="#">Amigos</a></li>
                 <li><a href="#">Jogos</a></li>
                 <li><a href="#">Configurações</a></li>
@@ -32,18 +29,19 @@
             </ul>
         </nav>
     </header>
+    
  
     <div class="sidebar">
         <span id="speedRuns"><a href="#">Speed Runs</a></span>
-            <div class="floating-page" id="floatingPage">
-                <h3>Essas são suas opções disponiveis</h3>
-                <br>
-                <ul>
-                    <li><a href="#">Super Mario</a></li>
-                    <li><a href="#">The Legend of Zelda</a></li>
-                    <li><a href="#">Donkey Kong</a></li>
-                </ul>
-            </div>
+        <div class="floating-page" id="floatingPage">
+            <h3>Essas são suas opções disponiveis</h3>
+            <br>
+            <ul>
+                <li><a href="#">Super Mario</a></li>
+                <li><a href="#">The Legend of Zelda</a></li>
+                <li><a href="#">Donkey Kong</a></li>
+            </ul>
+        </div>
 
         <span><a href="#">Recordes de Pontuação</a></span>
 

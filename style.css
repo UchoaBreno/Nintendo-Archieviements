@@ -17,12 +17,14 @@ ul, ol {
   list-style: none;
 }
 
+
 /* Definir a cor do texto padrão */
 body {
   background-color: #66c0f4; /* Cor de fundo da página */
   color: #fff; /* Cor do texto padrão (preto) */
   font-family: Arial, sans-serif;
   text-decoration: none;
+  height: 2000px;
 }
 
 a button span{ 
@@ -31,26 +33,42 @@ a button span{
 
 #background{
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
+  height: 90vh;
+  overflow: hidden;
   z-index: -1;
-  
+}
+
+#background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
 }
 
 .icon{
   width: 50px;
   height: 40px;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
 }
-
 /* Estilos para a barra superior */
-.header {
+header {
   display: flex; /* Exibe os elementos do cabeçalho em linha */
   top: 0;
-  padding-inline: 16px;
-  justify-content: space-around; /* Distribui os itens uniformemente ao longo do eixo principal (horizontal) */
+  position: fixed;
+  width: 100%;
+  padding-inline: 15px;
   align-items: center; /* Centraliza os itens verticalmente */
   height: 60px; /* Define uma altura para o cabeçalho */
   background-color: #333; /* Cor de fundo do cabeçalho */
+  
 }
 
 header ul {
@@ -59,34 +77,34 @@ header ul {
 }
 
 header ul li {
-  margin: 5px; /* Adiciona um espaço entre os itens de navegação */
-  margin-left: 30px;
+  margin: 0px; /* Adiciona um espaço entre os itens de navegação */
+  margin-left: 40px;
 }
 header ul li a {
   position: relative;
-  top: -35px;
+  top: -25px;
   left: 30px;
   font-size: 1.2em;
   color: #fff; /* Cor do texto dos itens de navegação */
   text-decoration: none; /* Remove o sublinhado dos links */
   justify-content: space-around;
+  padding-block: 13px;
+  padding-inline: 13px;
 }
 
 /* Estilos para a barra lateral */
 .sidebar {
   display: flex;
   width: 100%;
-  height: 140px;
+  height: 10vh;
   background-color: rgba(0, 0, 0, 0.5);
-  margin-top: -75px;
-  top: 0;
+  margin-top: 60px;
   left: 0;
-  z-index: 1;
   color: #fff;
 }
 /* Estilização dos spans */
 .sidebar span {
-  margin-top: 50px;
+  margin-top: 10px;
   display: relative;
   font-size: 1.2rem; /* Tamanho da fonte em relação ao tamanho do texto padrão */
   padding: 30px;
@@ -104,16 +122,13 @@ header ul li a {
 /* Efeito de hover no span */
 .sidebar span:hover {
   background-color: #2a475e; /* Cor de fundo ao passar o mouse */
-  border-radius: 50px; /* Borda arredondada ao passar o mouse */
-  border-width: 10px; /* Largura da borda ao passar o mouse */
-}
+  border-radius: 20px; /* Borda arredondada ao passar o mouse */}
 
 /* Estilos para o span quando o hover está ativo */
 .sidebar span.hovered {
   background-color: #2a475e; /* Cor de fundo ao passar o mouse */
   border-radius: 50px; /* Borda arredondada ao passar o mouse */
-  border-width: 10px; /* Largura da borda ao passar o mouse */
-  margin-top: 70px;
+  margin-top: -10px;
 }
 
 .floating-page {
@@ -138,18 +153,18 @@ header ul li a {
 
 /* Estilos para o formulário de pesquisa */
 #search-form {
-  text-align: right; /* Alinha os elementos filho ao centro */
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  position: fixed;
   z-index: 1;
 }
 
 #search-input {
   width: 250px; /* Largura do campo de entrada de pesquisa */
   padding: 10px; /* Espaçamento interno do campo de entrada */
-  margin-right: 20px; /* Espaço à direita do campo de entrada */
   border-radius: 8px; /* Borda arredondada do campo de entrada */
+  position: fixed;
+  right: 100px;
+  top: 20px;
+  transform: translate(0,0);
 }
 
 #search-form button {
@@ -159,4 +174,8 @@ header ul li a {
   border: none; /* Remove a borda do botão de pesquisa */
   border-radius: 8px; /* Borda arredondada do botão de pesquisa */
   cursor: pointer; /* Altera o cursor ao passar o mouse sobre o botão de pesquisa */
+  position: fixed;
+  right: 0px;
+  top: 25px;
+  transform: translate(0,0);
 }

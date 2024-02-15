@@ -1,3 +1,4 @@
+
 // Seleciona o elemento da barra lateral
 const sidebar = document.querySelector('.sidebar');
 
