@@ -10,11 +10,9 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
     background: #0c0ce94d;
     background: url(wallpaperflare.com_wallpaper.jpg);
-    justify-content: center;
     background-size: cover;
     background-position: center;
 }
@@ -33,8 +31,8 @@ header{
     position: flex;
     width: 70px;
     height: 40px;
-    margin-left: -10px;
-    margin-top: -10px;
+    margin-left: -30px;
+    margin-top: 0px;
   }
   
   .navigation a{
@@ -87,21 +85,25 @@ header{
   }
   
 .container {
-    width: 80%;
-    height: 80vh;
+    margin-left: 130px;
+    width: 40%;
+    height: 82vh;
     display: flex;
-    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 100px rgba(0, 0, 0, 1);
 }
 
 .form {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    padding: 3rem;
-}
+        width: 100%;
+        background: transparent;
+        flex-direction: column;
+        justify-content: center;
+        border: none;
+        outline: none;
+        font-size: 1em;
+        color: #162938;
+        font-weight: 600;
+        padding: 3rem;
+      }
 
 .form-header {
     margin-bottom: 3rem;
@@ -115,15 +117,20 @@ header{
 }
 
 .login-button button {
+    width: 100px;
+    height: 45px;
+    background: #6b63fff1;
     border: none;
-    background-color: #6c63ff;
-    padding: 0.4rem 1rem;
-    border-radius: 5px;
+    outline: none;
+    border-radius: 6px;
     cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
 }
 
 .login-button button:hover {
-    background-color: #6b63fff1;
+    background-color: #162938;
 }
 
 .login-button button a {
@@ -233,7 +240,7 @@ header{
 }
 
 .continue-button button:hover {
-    background-color: #6b63fff1;
+    background-color: #162938;
 }
 
 .continue-button button a {

@@ -53,3 +53,14 @@ floatingPage.addEventListener('mouseover', function() {
 floatingPage.addEventListener('mouseout', function() {
     speedRuns.classList.remove('hovered');
 });
+
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+    
+    // Aqui você faria uma solicitação para o seu servidor para verificar as credenciais do usuário
+    // Se as credenciais estiverem corretas, redirecione o usuário para o index
+    // Por enquanto, vamos apenas redirecionar o usuário para o index como exemplo
+    
+    // Redirecionamento para o index
+    window.location.href = 'index.html';
+});
