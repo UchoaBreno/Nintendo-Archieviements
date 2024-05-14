@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../public/Login.css" />
+    <link rel="icon" href="./Assets/favicon.ico" />
+
+    <script defer src="../public/script.js"></script>
+
+    <title>Entrar</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="../Assets/logo-cap.png" alt="logo" />
+
+      <nav class="navigation">
+        <a href="#">Home</a>
+        <a href="#">Quem somos ?</a>
+        <a href="#">Serviços</a>
+        <a href="#">Contato</a>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+      <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+      <div class="form-box login">
+        <h2>Login</h2>
+
+        <form action="#">
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+            <input type="email" required />
+            <label for="Email">Email</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"
+              ><ion-icon name="lock-closed-outline"></ion-icon
+            ></span>
+            <input type="password" required />
+            <label for="Password">Senha</label>
+          </div>
+
+          <div class="lembre-depois">
+            <label> <input type="checkbox" />Me lembre depois</label>
+            <a href="#">Esqueceu sua senha ?</a>
+          </div>
+          <button type="submit" class="btn">
+            <a href="index.html">Login</a>
+          </button>
+          <div class="registrar-login"></div>
+
+          <div class="registrar-login">
+            <p>
+              Não tem uma conta?<a
+                href="Criar-conta.html"
+                class="registrar-link"
+                >Registre-se</a
+              >
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
