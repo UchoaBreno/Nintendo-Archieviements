@@ -7,13 +7,16 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   background: url("../Assets/wallpaperflare.com_wallpaper.jpg");
   background-size: cover;
   background-position: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
@@ -22,10 +25,12 @@ header {
   top: 0;
   width: 100%;
   left: 0;
+  backdrop-filter: blur(5px);
   padding: 20px 100px;
   justify-content: space-between;
   align-items: center;
   z-index: 1;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 50);
 }
 .logo {
   position: flex;
@@ -41,6 +46,8 @@ header {
   font-weight: 500;
   margin-left: 50px;
   text-decoration: none;
+  color: black;
+  font-weight: 700;
 }
 
 .navigation a::after {
@@ -83,23 +90,28 @@ header {
 }
 
 .wrapper {
-  position: relative;
+  display: flex;
   width: 400px;
   height: 400px;
   background: transparent;
   border: 2px solid rgba(0, 0, 0, 0.5);
   border-radius: 20px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 5);
-  display: flex;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 5);
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .wrapper .form-box {
   width: 100%;
   padding: 40px;
+}
+
+.wrapper .form-box-login{
+  display: grid;
+  place-items: center;
 }
 
 .wrapper .icon-close {
@@ -170,6 +182,13 @@ header {
   line-height: 60px;
 }
 
+.lembre{
+  color: #162938;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+
 .lembre-depois {
   font-size: 0.9em;
   color: #162938;
@@ -193,10 +212,14 @@ header {
   text-decoration: underline;
 }
 
+#esqueceu:hover{
+  color: rgb(220, 70, 70);
+}
+
 .btn {
   width: 100%;
   height: 45px;
-  background: #6b63fff1;
+  background: #162938;
   border: none;
   outline: none;
   border-radius: 6px;
@@ -211,7 +234,7 @@ header {
 }
 
 .btn:hover {
-  background-color: #162938;
+  background-color: #6b63fff1;
 }
 
 .registrar-login {
@@ -222,12 +245,21 @@ header {
   margin: 25px 0 10px;
 }
 
-.registrar-login p a {
+.conta{
   color: #162938;
-  text-decoration: none;
-  font-weight: 600;
+  text-align: center;
+  font-weight: 700;
+  margin: 25px 0 10px;
 }
 
-.registrar-login p a:hover {
-  text-decoration: underline;
+.registrar-link{
+  color: #162938;
+  text-align: center;
+  font-weight: 700;
+  margin: 25px 0 10px;
+}
+
+.registrar-link:hover{
+  color: red;
+
 }

@@ -12,12 +12,12 @@ body {
   display: flex;
   align-items: center;
   background: #0c0ce94d;
-  background: url(wallpaperflare.com_wallpaper.jpg);
+  background: url(../Assets/wallpaperflare.com_wallpaper.jpg);
   background-size: cover;
   background-position: center;
 }
 header {
-  display: flex;
+   display: flex;
   position: fixed;
   top: 0;
   width: 100%;
@@ -26,6 +26,7 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 1;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 5);
 }
 .logo {
   position: flex;
@@ -88,7 +89,8 @@ header {
   width: 40%;
   height: 82vh;
   display: flex;
-  box-shadow: 0 0 100px rgba(0, 0, 0, 1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 5);
+  margin-bottom: 5px;
 }
 
 .form {

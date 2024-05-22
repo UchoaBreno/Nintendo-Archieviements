@@ -10,6 +10,7 @@
     <script defer src="../public/script.js"></script>
 
     <title>Entrar</title>
+    
   </head>
   <body>
     <header>
@@ -17,7 +18,7 @@
 
       <nav class="navigation">
         <a href="#">Home</a>
-        <a href="#">Quem somos ?</a>
+        <a href="#">Sobre nós</a>
         <a href="#">Serviços</a>
         <a href="#">Contato</a>
       </nav>
@@ -25,6 +26,7 @@
 
     <div class="wrapper">
       <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+      
       <div class="form-box login">
         <h2>Login</h2>
 
@@ -44,26 +46,20 @@
           </div>
 
           <div class="lembre-depois">
-            <label> <input type="checkbox" />Me lembre depois</label>
-            <a href="#">Esqueceu sua senha ?</a>
+            <span class="lembre"> <input type="checkbox" />Me lembre depois </span>
+            <a href="#" id="esqueceu">Esqueceu sua senha ?</a>
           </div>
           <button type="submit" class="btn">
             <a href="index.html">Login</a>
           </button>
-          <div class="registrar-login"></div>
 
           <div class="registrar-login">
-            <p>
-              Não tem uma conta?<a
-                href="Criar-conta.html"
-                class="registrar-link"
-                >Registre-se</a
-              >
-            </p>
+              <span class="conta"> Não tem uma conta? <a href="Criar-conta.html" class="registrar-link">Registre-se</a> </span>
           </div>
         </form>
       </div>
     </div>
+
 
     <script
       type="module"
