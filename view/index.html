@@ -16,50 +16,27 @@
 </head>
 <body>
 
-    <div id="background">
-        <video loop autoplay muted width="100%" height="300vh">
-            <source src="../Assets/background-video.mp4" type="video/mp4">
-        </video>
-    </div>
-    
     <header>
-        <nav class="nav">
-            <img src="./Assets/logo-cap.png" alt="Ícone" class="icon">
-            <ul class="menu">
-                <li><a href="#">Amigos</a></li>
-                <li><a href="#">Jogos</a></li>
-                <li><a href="#">Configurações</a></li>
-                <li><a href="#">Sobre nós</a></li>
-            </ul>
+        <img class="logo" src="../Assets/logo-cap.png" alt="logo">
+
+        <nav class="navigation">
+            <a href="#">Jogos</a>
+            <a href="#">Desafio</a>
+            <a href="#">Fóruns</a>
+            <a href="#">Ajuda</a>
+
+            <input class="input-search" type="search" placeholder="Digite algo para buscar...">
+            <button class="buscar" type="button">Buscar</button>
+
+            <button class="btnLogin" type="button">Login</button>
+            <button class="btnCadastro" type="button">Cadastrar</button>
+
         </nav>
     </header>
     
- 
-    <div class="sidebar">
-        <span id="speedRuns"><a href="#">Speed Runs</a></span>
-        <div class="floating-page" id="floatingPage">
-            <h3>Essas são suas opções disponiveis</h3>
-            <br>
-            <ul>
-                <li><a href="#">Super Mario</a></li>
-                <li><a href="#">The Legend of Zelda</a></li>
-                <li><a href="#">Donkey Kong</a></li>
-            </ul>
-        </div>
-
-        <span><a href="#">Recordes de Pontuação</a></span>
-
-        <span><a href="#">Conquistas Globais</a></span>
-
-        <span><a href="#">Conquistas por Jogo</a></span>
-
-    </div>
-    </div>
-
+    <main></main>
+    <aside></aside>
+    <footer></footer>
     
-    <form id="search-form">
-        <input type="text" id="search-input" placeholder="Digite sua pesquisa...">
-        <button type="submit">Pesquisar</button>
-    </form>
 </body>
 </html>
