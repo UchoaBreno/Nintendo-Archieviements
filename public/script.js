@@ -64,3 +64,10 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     // Redirecionamento para o index
     window.location.href = 'index.html';
 });
+
+
+const criarConta = document.querySelector('registrar-link')
+
+'registrar-link'.onclick = function(){
+
+};
